@@ -1199,17 +1199,6 @@
                     }
                 }
                 
-                // Add attorney empowerment section if attorney is enabled
-                if (attorneyEnabled && !bodyText.includes('Se otorga')) {
-                    bodyText += `\n\nSe otorga ${powerType} ${attorneyGenderValue === 'mujer' ? 'a la Licenciada' : 'al Licenciado'} ${attorneyName}, ${attorneyCivilStatus}, ${attorneyGenderValue}, ${attorneyNationalityValue}, mayor de edad, ${attorneyGenderValue === 'mujer' ? 'portadora' : 'portador'} de la cédula de identidad personal No. ${attorneyID}, ${attorneyProfession}`;
-                    
-                    if (purposeEnabled) {
-                        bodyText += `, para que ${powerPurpose}.`;
-                    } else {
-                        bodyText += '.';
-                    }
-                }
-                
                 // Add attorney faculties section
                 if (attorneyEnabled) {
                     bodyText += `\n\n${attorneyGenderValue === 'mujer' ? 'La Licenciada' : 'El Licenciado'} ${attorneyName}, queda expresamente ${attorneyGenderValue === 'mujer' ? 'facultada' : 'facultado'} para recibir, notificarse, solicitar, subsanar, obtener copias, comprometer, allanarse, desistir, transigir e interponer los recursos y acciones legales que estime conveniente para el mejor desempeño del presente mandato.`;
